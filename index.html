@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Path to Manufacturing – ECCV 2026 Workshop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <span class="nav-brand">ECCV 2026 Workshop</span>
+      <ul class="nav-links">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#speakers">Speakers</a></li>
+        <li><a href="#challenge">Challenge</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#organizers">Organizers</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-tag">ECCV 2026 Workshop</p>
+      <h1 class="hero-title">
+        The Path to Manufacturing:<br />
+        <span>Evolving 3D Generation to<br />Intelligent Computer-Aided Design</span>
+      </h1>
+      <div class="hero-btns">
+        <a href="#challenge" class="btn btn-primary">View Challenge</a>
+        <a href="#overview"  class="btn btn-outline">Learn More</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ===== OVERVIEW ===== -->
+  <section id="overview" class="section">
+    <div class="container">
+      <p class="eyebrow">About</p>
+      <h2 class="section-title">Overview</h2>
+      <div class="overview-grid">
+        <div class="overview-text">
+          <p>
+            This workshop explores the intersection of <strong>generative AI</strong> and
+            <strong>industrial engineering</strong>, bridging the momentum of generic 3D foundation
+            models with the rigorous demands of manufacturable asset generation.
+          </p>
+          <p>
+            Recent 3D foundation models (e.g., HunyuanSD, TRELLIS) excel at cross-modal synthesis
+            but lack the geometric precision required for real-world manufacturing. As generative AI
+            expands into physical domains, strict geometric correctness becomes essential — additive
+            manufacturing requires watertight, manifold boundaries for valid toolpaths, and robotic
+            simulations depend on closed solid volumes.
+          </p>
+          <p>
+            The undeniable backbone of true manufacturability is <strong>CAD</strong>. Unlike
+            visually-driven formats, CAD relies on a construction history — a strictly ordered
+            parametric sequence of unique operations (extrusion, fillet, etc.). LLMs introduce a
+            paradigm shift by reframing 3D modeling as <em>program synthesis</em>, enabling
+            automation of complex sequential design commands.
+          </p>
+        </div>
+        <div class="overview-topics">
+          <h3>Topics of Interest</h3>
+          <ul>
+            <li>3D generative models for manufacturing (CAD, B-Rep, meshes)</li>
+            <li>LLMs / MLLMs for parametric CAD generation &amp; editing</li>
+            <li>Multimodal CAD synthesis (image, point cloud, text)</li>
+            <li>Program synthesis for geometric modeling</li>
+            <li>Geometric deep learning on CAD structures</li>
+            <li>Embodied AI and robotics with manufacturable 3D assets</li>
+            <li>Datasets and benchmarks for industrial 3D generation</li>
+            <li>Evaluation metrics for geometric correctness</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INVITED SPEAKERS ===== -->
+  <section id="speakers" class="section section-alt">
+    <div class="container">
+      <p class="eyebrow">Keynotes</p>
+      <h2 class="section-title">Invited Speakers</h2>
+      <div class="speakers-grid">
+
+        <div class="speaker-card">
+          <img class="speaker-avatar" src="speaker_images/hao_zhang.png" alt="Prof. Hao (Richard) Zhang" style="object-fit:cover;">
+          <div class="speaker-info">
+            <h3><a href="https://www.cs.sfu.ca/~haoz/" target="_blank" rel="noopener">Prof. Hao (Richard) Zhang</a></h3>
+            <p class="affil">Simon Fraser University</p>
+          </div>
+        </div>
+
+        <div class="speaker-card">
+          <img class="speaker-avatar" src="speaker_images/niloy_mitra.jpg" alt="Prof. Niloy J. Mitra" style="object-fit:cover;">
+          <div class="speaker-info">
+            <h3><a href="http://www0.cs.ucl.ac.uk/staff/n.mitra/" target="_blank" rel="noopener">Prof. Niloy J. Mitra</a></h3>
+            <p class="affil">University College London</p>
+          </div>
+        </div>
+
+        <div class="speaker-card">
+          <img class="speaker-avatar" src="speaker_images/Xin_Tong.jpg" alt="Dr. Xin Tong" style="object-fit:cover;">
+          <div class="speaker-info">
+            <h3><a href="https://scholar.google.com/citations?user=P91a-UQAAAAJ&hl=en/" target="_blank" rel="noopener">Dr. Xin Tong</a></h3>
+            <p class="affil">Anuttacon</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHALLENGE ===== -->
+  <section id="challenge" class="section">
+    <div class="container">
+      <p class="eyebrow">Competition</p>
+      <h2 class="section-title">Challenge</h2>
+
+      <div class="challenge-grid challenge-single">
+
+        <div class="challenge-card">
+          <h3>Three-View Technical Drawing Conditioned B-rep Generation</h3>
+          <p>
+            Participants take an <strong>orthographic three-view technical drawing</strong> as input
+            and generate the complete corresponding CAD model as a <strong>B-rep</strong>.
+          </p>
+          <div class="challenge-detail">
+            <h4>Dataset</h4>
+            <p>9,000-10,000 B-rep files with corresponding orthographic three-view technical drawings. A randomly selected 10% split will be held out as the test set for final evaluation.</p>
+          </div>
+          <div class="challenge-detail">
+            <h4>Format</h4>
+            <p>Two-stage: <strong>50-day Development Phase</strong> (validation set optimization) → <strong>Final Phase</strong> (blind evaluation on withheld test set).</p>
+          </div>
+          <div class="challenge-coming-soon">
+            <span class="coming-soon-btn">Coming Soon</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="challenge-footer">
+        <p>Top-2 teams will deliver a <strong>15-minute technical talk</strong> followed by a <strong>5-minute Q&amp;A</strong> at the workshop.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SCHEDULE ===== -->
+  <section id="schedule" class="section section-alt">
+    <div class="container">
+      <p class="eyebrow">Program</p>
+      <h2 class="section-title">Tentative Program</h2>
+      <p class="section-sub">Afternoon session — September 8, 2026 &nbsp;·&nbsp; 14:00–18:00.</p>
+
+      <div class="schedule-table">
+        <div class="schedule-row header-row">
+          <span>Time</span><span>Event</span><span>Duration</span>
+        </div>
+        <div class="schedule-row">
+          <span>14:00</span>
+          <span><strong>Opening Remarks</strong></span>
+          <span>10 min</span>
+        </div>
+        <div class="schedule-row">
+          <span>14:10</span>
+          <span><strong>Keynote Talk 1</strong> — Invited Speaker</span>
+          <span>30 min</span>
+        </div>
+        <div class="schedule-row">
+          <span>14:40</span>
+          <span><strong>Keynote Talk 2</strong> — Invited Speaker</span>
+          <span>30 min</span>
+        </div>
+        <div class="schedule-row">
+          <span>15:10</span>
+          <span><strong>Keynote Talk 3</strong> — Invited Speaker</span>
+          <span>30 min</span>
+        </div>
+        <div class="schedule-row">
+          <span>15:40</span>
+          <span>Coffee Break</span>
+          <span>15 min</span>
+        </div>
+        <div class="schedule-row">
+          <span>15:55</span>
+          <span><strong>Keynote Talk 4</strong> — Invited Speaker</span>
+          <span>30 min</span>
+        </div>
+        <div class="schedule-row">
+          <span>16:25</span>
+          <span><strong>Keynote Talk 5</strong> — Invited Speaker</span>
+          <span>30 min</span>
+        </div>
+        <div class="schedule-row">
+          <span>16:55</span>
+          <span><strong>Roundtable Panel &amp; Q&amp;A</strong></span>
+          <span>20 min</span>
+        </div>
+        <div class="schedule-row">
+          <span>17:15</span>
+          <span><strong>Challenge Presentations</strong> — Top 2 Teams (15 min talk + 5 min Q&amp;A each)</span>
+          <span>40 min</span>
+        </div>
+        <div class="schedule-row">
+          <span>17:55</span>
+          <span>Closing Remarks</span>
+          <span>5 min</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ORGANIZERS ===== -->
+  <section id="organizers" class="section">
+    <div class="container">
+      <p class="eyebrow">Team</p>
+      <h2 class="section-title">Organizers</h2>
+      <div class="organizers-grid">
+        <div class="org-card">
+        <div class="org-photo">
+          <img src="organizer_images/yi_ma.jpg" alt="Yi Ma" style="object-fit:cover; object-position: 50% 20%;">
+        </div>
+        <strong><a href="https://people.eecs.berkeley.edu/~yima/" target="_blank" rel="noopener">Yi Ma</a></strong>
+        <span>UC Berkeley / HKU</span>
+      </div>
+        <div class="org-card">
+          <div class="org-photo">
+            <img src="organizer_images/kyoungmu_lee.png" alt="Kyoung Mu Lee" style="object-position: top;">
+          </div>
+          <strong><a href="https://cv.snu.ac.kr/index.php/kmlee/" target="_blank" rel="noopener">Kyoung Mu Lee</a></strong>
+          <span>Seoul National University</span>
+        </div>
+        <div class="org-card">
+          <div class="org-photo">
+            <img src="organizer_images/jianfei_cai.webp" alt="Jianfei Cai">
+          </div>
+          <strong><a href="https://research.monash.edu/en/persons/jianfei-cai" target="_blank" rel="noopener">Jianfei Cai</a></strong>
+          <span>Monash University</span>
+        </div>
+        <div class="org-card">
+          <div class="org-photo">
+            <img src="organizer_images/ligang_liu.png" alt="Ligang Liu">
+          </div>
+          <strong><a href="http://staff.ustc.edu.cn/~lgliu/" target="_blank" rel="noopener">Ligang Liu</a></strong>
+          <span>USTC</span>
+        </div>
+        <div class="org-card">
+          <div class="org-photo">
+            <img src="organizer_images/shenghua_gao.jpg" alt="Shenghua Gao">
+          </div>
+          <strong><a href="https://datascience.hku.hk/people/shenghua-gao/" target="_blank" rel="noopener">Shenghua Gao</a></strong>
+          <span>HKU</span>
+        </div>
+        <div class="org-card">
+          <div class="org-photo">
+            <img src="organizer_images/qixing_huang.jpg" alt="Qixing Huang">
+          </div>
+          <strong><a href="https://www.cs.utexas.edu/~huangqx/" target="_blank" rel="noopener">Qixing Huang</a></strong>
+          <span>UT Austin</span>
+        </div>
+        <div class="org-card">
+          <div class="org-photo">
+            <img src="organizer_images/youngmin_kim.jpg" alt="Young Min Kim" style="object-fit:cover; object-position: 50% 20%;">
+          </div>
+          <strong><a href="https://ece.snu.ac.kr/en/research-faculty/faculty/fulltime?md=view&profid=p833" target="_blank" rel="noopener">Young Min Kim</a></strong>
+          <span>Seoul National University</span>
+        </div>
+        <div class="org-card">
+          <div class="org-photo">
+            <img src="organizer_images/xiang_xu.png" alt="Xiang Xu">
+          </div>
+          <strong><a href="https://samxuxiang.github.io/" target="_blank" rel="noopener">Xiang Xu</a></strong>
+          <span>Prometheus, Inc. </span>
+        </div>
+        <div class="org-card">
+          <div class="org-photo">
+            <img src="organizer_images/yang_you.jpg" alt="Yang You">
+          </div>
+          <strong><a href="https://cs.stanford.edu/~yangyou/" target="_blank" rel="noopener">Yang You</a></strong>
+          <span>Stanford University</span>
+        </div>
+        <div class="org-card">
+          <div class="org-photo">
+            <img src="organizer_images/yilin_liu.jpg" alt="Yilin Liu">
+          </div>
+          <strong><a href="https://yilinliu77.github.io/" target="_blank" rel="noopener">Yilin Liu</a></strong>
+          <span>UCL & Autodesk Research</span>
+        </div>
+        <div class="org-card">
+          <div class="org-photo">
+            <img src="organizer_images/dacheng_qi.png" alt="Dacheng Qi" style="object-fit:cover; object-position: 50% 20%;">
+          </div>
+          <strong><a href="http://snitro.top/" target="_blank" rel="noopener">Dacheng Qi</a></strong>
+          <span>HKU & Shenzhen Loop Area Institute</span>
+        </div>
+        <div class="org-card">
+          <div class="org-photo">
+            <img src="organizer_images/jingwei_xu.jpg" alt="Jingwei Xu">
+          </div>
+          <strong><a href="https://davidxu-jj.github.io/" target="_blank" rel="noopener">Jingwei Xu</a></strong>
+          <span>Monash University</span>
+        </div>
+        <div class="org-card">
+          <div class="org-photo">
+            <img src="organizer_images/chenyu_wang.jpg" alt="Chenyu Wang" style="object-fit:cover; object-position: 50% 25%;">
+          </div>
+          <strong><a href="https://chenyu-wang567.github.io/" target="_blank" rel="noopener">Chenyu Wang</a></strong>
+          <span>HKU</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section section-alt">
+    <div class="container contact-container">
+      <p class="eyebrow">Get in Touch</p>
+      <h2 class="section-title">Contact</h2>
+      <p class="contact-lead">For inquiries about the workshop or challenge, feel free to reach out.</p>
+      <div class="contact-card">
+        <div class="contact-card-inner">
+          <div class="contact-avatar">CW</div>
+          <div class="contact-details">
+            <p class="contact-name">Chenyu Wang</p>
+            <a href="mailto:chenyuwang@connect.hku.hk" class="contact-email-link">chenyuwang@connect.hku.hk</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <p>© 2026 ECCV Workshop — The Path to Manufacturing. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
